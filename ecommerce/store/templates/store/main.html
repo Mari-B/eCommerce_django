@@ -2,7 +2,7 @@
 {% load static %}
 <html>
 <head>
-	<title>Ecom</title>
+	<title>Golden Shoe</title>
 
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
 
@@ -38,7 +38,7 @@
     </script>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-4">
       <a class="navbar-brand" href="{% url 'home' %}">Golden Shoe</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -60,12 +60,12 @@
           </li>
         </ul>
 
-        <form class="form-inline my-2 my-lg-0">
+        <form class="form-inline my-2 my-lg-0" id="search">
           <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
           <button class="btn btn btn-light my-2 my-sm-0" type="submit">Search</button>
         </form>
 
-          <div class="form-inline my-2 my-lg-0 ml-3">
+          <div class="form-inline my-2 my-lg-0 ml-3 mr-2" id="cart">
             <a href="#"class="btn btn-dark">Login</a>
             <a href="{% url 'cart' %}">
                 <img  id="cart-icon" src="{% static 'images/cart.png' %}">
@@ -84,7 +84,7 @@
                  {% endblock content %}
          </div>
     <!-- Footer-->
-        <footer class="py-1 bg-dark footer fixed-bottom">
+        <footer class="bg-dark footer fixed-bottom">
             <div class="container"><p class="m-0 text-center text-white">
                 <a href="#" class="fa fa-facebook"></a>
                 <a href="#" class="fa fa-twitter"></a>

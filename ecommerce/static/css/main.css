@@ -125,7 +125,10 @@ h1,h2,h3,h4,h5,h6{
     flex: 50%;
     max-width: 50%;
   }
-  .form-inline{
+  #search{
+    display: none;
+  }
+  .img-about{
     display: none;
   }
 }
@@ -139,12 +142,7 @@ h1,h2,h3,h4,h5,h6{
 }
 
 footer{
-    height: 10vh;
-}
-
-nav{
-    height: 10vh;
-
+    height: 11vh;
 }
 
 p{
@@ -162,7 +160,7 @@ p{
 }
 
 .nav-item, .navbar-brand {
-    padding-left:10px;
+    padding-left:15px;
 }
 
 .navbar-collapse {
@@ -190,5 +188,10 @@ p{
 
 .h2-faq{
     padding: 20px;
+}
+
+.splide__slide img {
+	width : 100%;
+	height: auto;
 }
 
