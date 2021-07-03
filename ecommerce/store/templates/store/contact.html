@@ -1,0 +1,55 @@
+{% extends 'store/main.html' %}
+{% load static %}
+{% block content %}
+ <main class="container">
+
+     <section>
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-6 text-center mb-5">
+					<h2>Contact Us</h2>
+					<br>
+					<div>
+						<p>Address: 198 West 21th Street, Suite 721 New York NY 10016
+						<p>Email: info@goldenshoe.com</p>
+						<p>Phone: 0131 847539</p>
+					</div>
+					<br>
+					<form method="POST" id="contactForm" name="contactForm" class="contactForm">
+						<div class="row">
+							<div class="col-md-12">
+								<div class="form-group">
+									<input type="text" class="form-control" name="name" id="name" placeholder="Name">
+								</div>
+							</div>
+							<div class="col-md-12">
+								<div class="form-group">
+									<input type="email" class="form-control" name="email" id="email" placeholder="Email">
+								</div>
+							</div>
+							<div class="col-md-12">
+								<div class="form-group">
+									<input type="text" class="form-control" name="subject" id="subject" placeholder="Subject">
+								</div>
+							</div>
+							<div class="col-md-12">
+								<div class="form-group">
+									<textarea name="message" class="form-control" id="message" cols="30" rows="4" placeholder="Create a message here"></textarea>
+								</div>
+							</div>
+							<div class="col-md-12">
+								<div class="form-group">
+									<input value="Send Message" class="btn btn-dark" href="#">
+
+								</div>
+							</div>
+						</div>
+					</form>
+
+				</div>
+			</div>
+	</section>
+ </main>
+
+
+{% endblock content %}

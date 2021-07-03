@@ -1,0 +1,100 @@
+{% extends 'store/main.html' %}
+{% load static %}
+{% block content %}
+     <h1>Frequently Asked Questions</h1>
+
+     <h2 class="h2-faq">Orders</h2>
+
+     <div id="accordion ">
+       <div class="card">
+         <div class="card-header" id="headingOne">
+           <h5 class="mb-0">
+             <button class="btn collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+               What forms of payment can I use?
+             </button>
+           </h5>
+         </div>
+
+         <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+           <div class="card-body">
+             We currently accept all major credit and debit cards, international credit/debit cards, Afterpay interest-free payments, domestic Paypal accounts, Amazon Pay, and Apple Pay.
+           </div>
+         </div>
+       </div>
+       <div class="card">
+         <div class="card-header" id="headingTwo">
+           <h5 class="mb-0">
+             <button class="btn collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+               Can I split my transaction between different payment methods?
+             </button>
+           </h5>
+         </div>
+         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+           <div class="card-body">
+             Unfortunately, we are only able to accept one payment method per transaction.
+           </div>
+         </div>
+       </div>
+       <div class="card">
+         <div class="card-header" id="headingThree">
+           <h5 class="mb-0">
+             <button class="btn collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+               I have a promotional code or gift card code. How do I apply?
+             </button>
+           </h5>
+         </div>
+         <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+           <div class="card-body">
+             Once at checkout, enter the gift card or discount code in the upper right corner and click "apply".
+           </div>
+         </div>
+       </div>
+     </div>
+
+
+     <h2 class="h2-faq">Returns</h2>
+     <div id="accordion">
+       <div class="card">
+         <div class="card-header" id="headingFour">
+           <h5 class="mb-0">
+             <button class="btn collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+               How long do I have to return?
+             </button>
+           </h5>
+         </div>
+         <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+           <div class="card-body">
+                We will gladly accept returns on all items (except items marked "Final Sale”) within 14 days from time of delivery. You have 7 days from the time you request your return to drop off with FedEx.
+           </div>
+         </div>
+       </div>
+       <div class="card">
+         <div class="card-header" id="headingFive">
+           <h5 class="mb-0">
+             <button class="btn collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+               Are returns free?
+             </button>
+           </h5>
+         </div>
+         <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+           <div class="card-body">
+             We offer free returns and exchanges on full priced items. There will be a $10 return fee added for all sale items over 20% off, inclusive of VIP and Friends & Family sales.
+           </div>
+         </div>
+       </div>
+       <div class="card">
+         <div class="card-header" id="headingSix">
+           <h5 class="mb-0">
+             <button class="btn collapsed" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+               How do I request an exchange?
+             </button>
+           </h5>
+         </div>
+         <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordion">
+           <div class="card-body">
+                To initiate an exchange, click on "Returns & Exchanges" at the footer of our site under Customer Service. Enter your order number and zip code. You will proceed by clicking through the prompts and choosing the new item you wish to receive as an exchange. You will then receive printable FedEx return label via email.
+           </div>
+         </div>
+       </div>
+     </div>
+{% endblock content %}
