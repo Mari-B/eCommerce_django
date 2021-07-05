@@ -1,4 +1,4 @@
 # eCommerce demo created with Django
 
-##Dependences:
+## Dependences:
 Django and Pillow (imaging library)
