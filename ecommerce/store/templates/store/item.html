@@ -1,49 +1,40 @@
 {% extends 'store/main.html' %}
 {% load static %}
 {% block content %}
-
-
-<!-- Product section-->
-        <section class="py-5">
-            <div class="container px-4 px-lg-5 my-5">
-                <div class="row gx-4 gx-lg-5 align-items-center">
-                    <div class="col-md-6"><img class="card-img-top mb-5 mb-md-0" src="{{item.image.url}}"/></div>
-
-
-                    <div class="col-md-6">
-                        <h1 class="display-5 fw-bolder">{{item.name}}</h1>
-                        <div class="fs-5 mb-5">
-                            <h4>£{{item.price|floatformat:2}}</h4>
-
-                        </div>
-                        <p class="lead">Pleated knot heeled sandal in ivory pearl fabric. Padded footbed with gold stamped logo. Open toe with adjustable buckle ankle strap. 3.5 inch heel. Made with all vegan materials.</p>
-
-                        <ul>
-                            <li>Upper: 60% Silk Fabric, 40% Metallic Fabric</li>
-                            <li>Sole: 100% Leather</li>
-                            <li>Made in Italy</li>
-                        </ul>
-
-                        <div class="d-flex">
-                            <input class="form-control text-center me-3" id="inputQuantity" type="num" value="1" style="max-width: 3rem" />
-                                <div class="dropdown">
-                                  <button class="btn btn-dark dropdown-toggle ml-2" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Size
-                                  </button>
-                                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                      <a class="dropdown-item">5</a>
-                                      <a class="dropdown-item">6</a>
-                                      <a class="dropdown-item">7</a>
-                                      <a class="dropdown-item">8</a>
-                                      <a class="dropdown-item">9</a>
-                              </div>
-</div>
-                            <button data-product={{item.id}} data-action="add" class="btn btn-outline-secondary add-btn update-cart ml-2">Add to Cart</button>
-                        </div>
-						<a  class="btn btn-outline-dark mt-2 mb-2" href="{% url 'store' %}">&#x2190; Continue Shopping</a>
+<section class="py-5">
+    <div class="container px-4 px-lg-5 my-5">
+        <div class="row gx-4 gx-lg-5 align-items-center">
+            <div class="col-md-6"><img class="card-img-top mb-5 mb-md-0" src="{{item.image.url}}"/></div>
+                <div class="col-md-6">
+                    <h1 class="display-5 fw-bolder">{{item.name}}</h1>
+                    <div class="fs-5 mb-5">
+                    <h4>£{{item.price|floatformat:2}}</h4>
                     </div>
+                    <p class="lead">Pleated knot heeled sandal in ivory pearl fabric. Padded footbed with gold stamped logo. Open toe with adjustable buckle ankle strap. 3.5 inch heel. Made with all vegan materials.</p>
+                    <ul>
+                        <li>Upper: 60% Silk Fabric, 40% Metallic Fabric</li>
+                        <li>Sole: 100% Leather</li>
+                        <li>Made in Italy</li>
+                    </ul>
+                    <div class="d-flex">
+                        <input class="form-control text-center me-3" id="inputQuantity" type="num" value="1" style="max-width: 3rem" />
+                            <div class="dropdown">
+                            <button class="btn btn-dark dropdown-toggle ml-2" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Size
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                              <a class="dropdown-item">5</a>
+                              <a class="dropdown-item">6</a>
+                              <a class="dropdown-item">7</a>
+                              <a class="dropdown-item">8</a>
+                              <a class="dropdown-item">9</a>
+                            </div>
+                    </div>
+                    <button data-product={{item.id}} data-action="add" class="btn btn-outline-secondary add-btn update-cart ml-2">Add to Cart</button>
                 </div>
+                <a  class="btn btn-outline-dark mt-2 mb-2" href="{% url 'store' %}">&#x2190; Continue Shopping</a>
             </div>
-        </section>
-
+        </div>
+    </div>
+</section>
 {% endblock content %}

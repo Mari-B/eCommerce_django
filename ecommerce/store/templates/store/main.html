@@ -3,38 +3,33 @@
 <html>
 <head>
 	<title>Golden Shoe</title>
-
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
-
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
 	<link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Gilda+Display&display=swap" rel="stylesheet">
 
     <script type="text/javascript">
-            var user = '{{request.user}}'
+        var user = '{{request.user}}'
 
-            function getCookie(name) {
-                let cookieValue = null;
-                if (document.cookie && document.cookie !== '') {
-                    const cookies = document.cookie.split(';');
-                    for (let i = 0; i < cookies.length; i++) {
-                        const cookie = cookies[i].trim();
-                        // Does this cookie string begin with the name we want?
-                        if (cookie.substring(0, name.length + 1) === (name + '=')) {
-                            cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
-                            break;
-                        }
+        function getCookie(name) {
+            let cookieValue = null;
+            if (document.cookie && document.cookie !== '') {
+                const cookies = document.cookie.split(';');
+                for (let i = 0; i < cookies.length; i++) {
+                    const cookie = cookies[i].trim();
+                    // Does this cookie string begin with the name we want?
+                    if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                        cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                        break;
                     }
                 }
-                return cookieValue;
             }
-            const csrftoken = getCookie('csrftoken');
+            return cookieValue;
+        }
+        const csrftoken = getCookie('csrftoken');
     </script>
 </head>
 <body>
@@ -43,7 +38,6 @@
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
@@ -59,43 +53,35 @@
             <a class="nav-link" href="{% url 'faq' %}">FAQ</a>
           </li>
         </ul>
-
         <form class="form-inline my-2 my-lg-0" id="search">
           <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
           <button class="btn btn btn-light my-2 my-sm-0" type="submit">Search</button>
         </form>
-
-          <div class="form-inline my-2 my-lg-0 ml-3 mr-2" id="cart">
+        <div class="form-inline my-2 my-lg-0 ml-3 mr-2" id="cart">
             <a href="#"class="btn btn-dark">Login</a>
             <a href="{% url 'cart' %}">
-                <img  id="cart-icon" src="{% static 'images/cart.png' %}">
+            <img  id="cart-icon" src="{% static 'images/cart.png' %}">
             </a>
             <p id="cart-total">{{cartItems}}</p>
-          </div>
+        </div>
       </div>
     </nav>
-
-
-         <div class="container">
-                <br>
-                {% block content %}
-
-
-                 {% endblock content %}
-         </div>
-    <!-- Footer-->
-        <footer class="bg-dark footer fixed-bottom">
-            <div class="container"><p class="m-0 text-center text-white">
-                <a href="#" class="fa fa-facebook"></a>
-                <a href="#" class="fa fa-twitter"></a>
-                <a href="#" class="fa fa-instagram"></a>
-                <br>
-                Golden Shoe &copy; 2021</p></div>
-        </footer>
+    <div class="container">
+        <br>
+        {% block content %}
+        {% endblock content %}
+    </div>
+<!-- Footer-->
+<footer class="bg-dark footer fixed-bottom">
+    <div class="container"><p class="m-0 text-center text-white">
+        <a href="#" class="fa fa-facebook"></a>
+        <a href="#" class="fa fa-twitter"></a>
+        <a href="#" class="fa fa-instagram"></a>
+        <br>
+        Golden Shoe &copy; 2021</p></div>
+</footer>
 	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script type="text/javascript" src="{% static 'js/cart.js' %}"></script>
 </body>
